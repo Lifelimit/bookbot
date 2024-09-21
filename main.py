@@ -1,5 +1,5 @@
 def main():
-    file_path = "github.com/Lifelimit/bookbot/books/frankenstein.txt" # github.com/Lifelimit/bookbot/books/frankenstein.txt
+    file_path = "books/frankenstein.txt" # github.com/Lifelimit/bookbot/books/frankenstein.txt
     text = get_book_text(file_path)
     print(text)
 
@@ -7,8 +7,8 @@ def main():
     print(f"\nThe book contains {word_count} words.")
 
     char_count = count_characters(text)
-    print("\nCharacter counts:")
-    for char, count in char_count.items():
+    print("\nCharacter counts in alphabetical order:")
+    for char, count in sorted(char_count.items()):
         print(f"{char}: {count}")
 
 
